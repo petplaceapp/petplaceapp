@@ -1,0 +1,30 @@
+<ion-view title="Pet shops" class="backgroundGradiente">
+    
+        <ion-content>
+            <ion-list>
+                
+                <div class="bar bar-header item-input-inset">
+                    <label class="item-input-wrapper">
+                        <i class="icon ion-ios-search placeholder-icon"></i>
+                        <input type="search" placeholder="Pesquisar" ng-model="search">
+                    </label>
+            
+                </div>
+            <div class="list">
+                
+                    <ion-item class="item item-thumbnail-left" ng-repeat="petshop in petshop | filter: search | orderBy: 'nome'">
+        
+                        <img src={{petshop.fotoshop}}>
+                        <strong>{{petshop.nome}}</strong> 
+                        <p>{{petshop.telefone}}</p>
+                        <p>{{petshop.email}}</p>
+                        <p>{{petshop.endereco}}</p>
+                        <!-- <ion-option-button class="button-assertive" ng-click="apagar(contato.$id)">
+                            Apagar
+                        </ion-option-button> -->
+                        
+                    </ion-item>
+                </div>
+            </ion-list>
+        </ion-content>
+    </ion-view>

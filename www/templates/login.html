@@ -1,0 +1,29 @@
+<ion-view title="PetPlace App" class="backgroundGradiente">
+
+    <ion-content>
+        <form ng-submit="entrar(user)" name="form">
+            <div class="item item-image logo">
+                    <img src="img/logo.png" alt="Logo" style="width:60%;height:60%;">
+                    
+            </div>
+
+            <div class="list padding">
+                <label class="item item-input">
+                <input type="email" placeholder="Email" ng-model="user.email" required>
+                </label>
+                <label class="item item-input">
+                <input type="password" ng-minlength="6" placeholder="Senha" ng-model="user.password" required>
+                </label>
+            </div>
+
+            <div class="padding">
+                <button ng-disabled="form.$invalid" class="button button-block button-assertive">
+                    Entrar
+                </button>
+                <a ui-sref="cadastro" class="button button-dark button-block">
+                    Cadastrar
+                </a>
+            </div>
+     </form>
+    </ion-content>
+</ion-view>

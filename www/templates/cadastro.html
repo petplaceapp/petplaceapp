@@ -1,0 +1,31 @@
+<ion-view title="Cadastro">
+        
+        <ion-content>
+            <form ng-submit="registrar(user)" name="form">
+                <ion-list class="list-inset">
+                    <ion-item class="item item-input">
+                      <!-- <i class = "icon ion-ios-locked-outline placeholder-icon"></i> -->
+                      <input type="text" placeholder="Nome completo" ng-model="user.nome">
+                    </ion-item>
+              
+                    <ion-item class="item item-input">
+                      <i class="icon ion-ios-person-outline placeholder-icon"></i>
+                      <input type="email" placeholder="email@email.com" ng-model="user.email" required>
+                    </ion-item>
+              
+                    <ion-item class="item item-input">
+                      <i class="icon ion-ios-locked-outline placeholder-icon"></i>
+                      <input type="password" placeholder="Senha" ng-minlength="6" ng-model="user.password" required>
+                    </ion-item>
+              
+                    <ion-item class="item-button">
+                      <button class="button button-block button-balanced" ng-disabled="form.$invalid">
+                        Registrar
+                      </button>
+                    </ion-item>
+
+                  </ion-list>
+            </form>
+        </ion-content>
+    
+    </ion-view>

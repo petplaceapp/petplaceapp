@@ -1,0 +1,27 @@
+<ion-view title="Pets">
+        
+            <ion-nav-buttons side="right">
+                <button class="button button-clear icon ion-ios-plus-empty" ng-click="add()"></button>
+            </ion-nav-buttons>
+        
+            <ion-content>
+                <ion-slides options="data.sliderOptions" slider="data.sliderDelegate">
+    
+                    <ion-slide-page class="" ng-repeat="pets in pets | filter: search | orderBy: 'idade'">
+                        <div>
+                        <img src={{pets.fotopet}}>
+                        </div>
+                        <strong>{{pets.nome}}</strong> 
+                        <p>{{pets.raca}}</p>
+                        <p>{{pets.idade}}</p>
+                        <p>{{pets.peso}}</p>
+                        <p>{{pets.sexo}}</p>
+                        <p>{{pets.tamanho}}</p>
+                        <ion-option-button class="button-assertive" ng-click="apagar(pets.$id)">
+                            Apagar
+                        </ion-option-button>
+                        
+                    </ion-slide-page>
+                </ion-slides>
+            </ion-content>
+        </ion-view>    

@@ -1,0 +1,34 @@
+<ion-view title="Cadastro">
+    
+    <ion-content>
+        <form ng-submit="salvar(pets)">
+            <div class="list padding">
+                    <label class="item item-input">
+                    <input type="text" placeholder="Nome do pet" ng-model="pets.nome">
+                    </label>
+                    <label class="item item-input">
+                    <input type="text" placeholder="Raça" ng-model="pets.raca">
+                    </label>
+                    <label class="item item-input">
+                    <input type="text" placeholder="Idade" ng-model="pets.idade">
+                    </label>
+                    <label class="item item-input">
+                    <input type="text" placeholder="Peso" ng-model="pets.peso">
+                    </label>
+                    <label class="item item-input">
+                    <input type="text" placeholder="Sexo" ng-model="pets.sexo">
+                    </label>
+                    <label class="item item-input">
+                    <input type="text" placeholder="Tamanho" ng-model="pets.tamanho">
+                    </label>
+                </div>
+                <div class="padding">
+                        <button class="button button-block button-balanced" ng-click="salvar">
+                            Salvar
+                        </button>
+
+                    </div>
+        </form>
+    </ion-content>
+
+</ion-view>
