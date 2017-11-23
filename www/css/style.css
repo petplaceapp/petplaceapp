@@ -10,10 +10,10 @@
 .backgroundGradiente {
   height: 100%;
   width: 100%;
-  background: -webkit-radial-gradient(white, #c1daff); /* For Safari 5.1 to 6.0 */
-  background: -o-radial-gradient(white, #c1daff); /* For Opera 11.6 to 12.0 */
-  background: -moz-radial-gradient(white, #c1daff); /* For Fx 3.6 to 15 */
-  background: radial-gradient(white, #c1daff); /* Standard syntax (must be last) */
+  background: -webkit-radial-gradient(white, #76D1C6); /* For Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(white, #76D1C6); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(white, #76D1C6); /* For Fx 3.6 to 15 */
+  background: radial-gradient(white, #76D1C6); /* Standard syntax (must be last) */
 }
 
 .background{
@@ -34,3 +34,18 @@
   height: 100vh !important;
 }
 
+.slides{
+  height: 90vh !important;
+}
+
+.imglist {
+  width: 180px !important; 
+  height: 180px !important;
+  display: block;
+  margin: auto;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 5px;
+}

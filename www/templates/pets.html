@@ -1,27 +1,23 @@
 <ion-view title="Pets">
-        
-            <ion-nav-buttons side="right">
-                <button class="button button-clear icon ion-ios-plus-empty" ng-click="add()"></button>
-            </ion-nav-buttons>
-        
-            <ion-content>
-                <ion-slides options="data.sliderOptions" slider="data.sliderDelegate">
     
-                    <ion-slide-page class="" ng-repeat="pets in pets | filter: search | orderBy: 'idade'">
-                        <div>
-                        <img src={{pets.fotopet}}>
-                        </div>
-                        <strong>{{pets.nome}}</strong> 
-                        <p>{{pets.raca}}</p>
-                        <p>{{pets.idade}}</p>
-                        <p>{{pets.peso}}</p>
-                        <p>{{pets.sexo}}</p>
-                        <p>{{pets.tamanho}}</p>
-                        <ion-option-button class="button-assertive" ng-click="apagar(pets.$id)">
-                            Apagar
-                        </ion-option-button>
-                        
-                    </ion-slide-page>
-                </ion-slides>
-            </ion-content>
-        </ion-view>    
+        <ion-nav-buttons side="right">
+            <button class="button button-clear icon ion-ios-plus-empty" ng-click="add()"></button>
+        </ion-nav-buttons>
+    
+        <ion-content>
+            <ion-slides class="slides" options="data.sliderOptions" slider="data.sliderDelegate">
+
+                <ion-slide-page ng-repeat="pets in pets | filter: search | orderBy: 'idade'">
+                    <div><img class="imglist" src="https://firebasestorage.googleapis.com/v0/b/petplaceapp-br.appspot.com/o/quickadd.png?alt=media&token=558cb9cf-a60b-4551-be2f-b4c734cff909" ng-click="addImage()"></div>
+                    <div class="item item-padding" style="margin-left:5px; margin-right:5px; border-radius: 8px;">
+                        <p><h2><strong>{{pets.nome}}</strong></h2></p>
+                        <p><strong>Raça: </strong>{{pets.raca}}</p>
+                        <p><strong>Idade: </strong>{{pets.idade}}</p>
+                        <p><strong>Peso: </strong>{{pets.peso}}</p>
+                        <p><strong>Sexo: </strong>{{pets.sexo}}</p>
+                        <p><strong>Altura: </strong>{{pets.tamanho}}</p>
+                    </div>
+                </ion-slide-page>
+            </ion-slides>
+        </ion-content>
+    </ion-view>    

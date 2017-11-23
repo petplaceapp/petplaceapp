@@ -143,6 +143,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 
   app.controller('InicialCtrl', function($scope,$state){
 
+
     $scope.telaPets = function(){
       $state.go('pets');
     }
@@ -156,11 +157,12 @@ app.config(function($stateProvider, $urlRouterProvider){
       $state.go('saude');
     }
     });
-    app.controller('PetsCtrl', function($scope, $firebaseArray, $state){
-      
-      var user = firebase.auth().currentUser;
+  app.controller('PetsCtrl', function($scope, $firebaseArray, $state){
+  
+
+        var user = firebase.auth().currentUser;
         var ref = firebase.database().ref().child('usuario').child(user.uid).child('pets');
-          
+          //$scope.pets = $firebaseArray(ref);
           $scope.pets = {};
           $scope.pets = $firebaseArray(ref);
           $scope.pets.currentPage = 0;
@@ -190,6 +192,9 @@ app.config(function($stateProvider, $urlRouterProvider){
         
           setupSlider();
     
+
+          
+
           $scope.telaPerfil = function(){
             $state.go('perfil');
           }
@@ -231,7 +236,6 @@ app.config(function($stateProvider, $urlRouterProvider){
     var ref = firebase.database().ref().child('veterinarios');
     $scope.veterinarios = $firebaseArray(ref);    
   });
-
 
 
   app.controller('MapaCtrl', function($scope, $state, $cordovaGeolocation) {

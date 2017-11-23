@@ -11,9 +11,9 @@
     
                 </div>
     
-                <ion-item class="item item-avatar" ng-repeat="veterinarios in veterinarios | filter: search | orderBy: 'nome'">
+                <ion-item class="item item-thumbnail-left" ng-repeat="veterinarios in veterinarios | filter: search | orderBy: 'nome'">
     
-                    <img src=http://www.valuevet.net/revolution/images/value-vet-2-b.png>
+                    <img src={{veterinarios.fotovet}}>
                     <strong>{{veterinarios.nome}}</strong> 
                     <p>{{veterinarios.telefone}}</p>
                     <p>{{veterinarios.email}}</p>
