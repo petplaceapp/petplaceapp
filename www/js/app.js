@@ -156,6 +156,11 @@ app.config(function($stateProvider, $urlRouterProvider){
     $scope.telaSaude = function(){
       $state.go('saude');
     }
+    $scope.signOut= function(){
+      firebase.auth().signOut();
+      location.reload();
+      $state.go("login");
+    }
     });
   app.controller('PetsCtrl', function($scope, $firebaseArray, $state){
   
@@ -227,7 +232,7 @@ app.config(function($stateProvider, $urlRouterProvider){
     $scope.salvar = function(pets){
       var ref = firebase.database().ref().child('usuario').child(user.uid).child('pets');
       $firebaseArray(ref).$add(pets);
-  
+
       $state.go('pets');
     };
   });
